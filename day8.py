@@ -18,7 +18,8 @@ def takename(name, location):
 takename("Rozina", "Peshawar")
 
 
-###### Pint area calculator 
+######**************** Pint area calculator  **********************################
+
 def paint_area_calculator():
     # Get room dimensions
     length = float(input("Enter the length of the room in meters: "))
