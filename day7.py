@@ -2,45 +2,48 @@ import random
 from hangman_words import word_list
 from hangman_art import logo, stages
 
-chosen_word = random.choice(word_list)
-word_length = len(chosen_word)
+# Select a random word from the word list
+target_word = random.choice(word_list)
+word_length = len(target_word)
 
-end_of_game = False
-lives = 6
+# Initialize game variables
+game_over = False
+remaining_lives = 6
 
+# Display the hangman logo
 print(logo)
 
-# Create blanks
-display = ['_'] * word_length
+# Create a list to show the current state of the word
+current_display = ['_'] * word_length
 
-while not end_of_game:
-    guess = input("Guess a letter: ").lower()
+while not game_over:
+    # Get user input
+    guessed_letter = input("Guess a letter: ").lower()
 
-    # If the user has entered a letter they've already guessed
-    if guess in display:
-        print(f"You've already guessed {guess}")
-        continue  # Skip the rest of the loop if the letter was already guessed
-
-    # Check guessed letter
-    if guess in chosen_word:
-        for position in range(word_length):
-            letter = chosen_word[position]
-            if letter == guess:
-                display[position] = letter
+    # Check if the user has already guessed this letter
+    if guessed_letter in current_display:
+        print(f"You've already guessed '{guessed_letter}'")
+        continue
+    
+    # Update the display with the guessed letter
+    if guessed_letter in target_word:
+        for index in range(word_length):
+            if target_word[index] == guessed_letter:
+                current_display[index] = guessed_letter
     else:
-        print(f"You guessed {guess}, that's not in the word. You lose a life.")
-        lives -= 1
-        if lives == 0:
-            end_of_game = True
+        print(f"'{guessed_letter}' is not in the word. You lose a life.")
+        remaining_lives -= 1
+        if remaining_lives == 0:
+            game_over = True
             print("You lose.")
     
     # Print the current state of the word
-    print(f"{' '.join(display)}")
+    print(' '.join(current_display))
     
-    # Print the hangman stage
-    print(stages[lives])
+    # Print the current hangman stage
+    print(stages[remaining_lives])
 
-    # Check if user has got all letters
-    if "_" not in display:
-        end_of_game = True
+    # Check if the user has guessed all the letters
+    if "_" not in current_display:
+        game_over = True
         print("You win.")
