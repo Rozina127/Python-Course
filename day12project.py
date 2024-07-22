@@ -51,5 +51,5 @@ def game():
         elif guess != answer:
             print("Guess again.")
 
-# Start the game
+# the game start 
 game()
