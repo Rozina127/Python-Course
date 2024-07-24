@@ -1,6 +1,6 @@
 #installing python setup in day 15
 
-# Define the menu and resources available
+# The menu and resources available
 MENU = {
     "espresso": {"water": 50, "coffee": 18, "cost": 1.5},
     "latte": {"water": 200, "milk": 150, "coffee": 24, "cost": 2.5},
@@ -12,7 +12,7 @@ resources = {"water": 300, "milk": 200, "coffee": 100}
 
 def print_report():
     """Print the current resource values and profit."""
-    print(f"Water: {resources['water']}ml")
+    print(f"Water: {resources['water']}mll")
     print(f"Milk: {resources['milk']}ml")
     print(f"Coffee: {resources['coffee']}g")
     print(f"Money: ${profit}")
