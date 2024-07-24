@@ -21,7 +21,7 @@ car1.display_details()
 car2.display_details() 
  
 
- ######################## Cofee machine project in classes
+ ######################## Cofee machine project in classes  ######################
 class CoffeeMachine:
     MENU = {
         "espresso": {"water": 50, "coffee": 18, "cost": 1.5},
@@ -92,7 +92,7 @@ coffee_machine = CoffeeMachine()
 coffee_machine.run()
 
 
-################## with multiple classes the code will be ####################
+################## With multiple classes the code will be ####################
 
 class Menu:
     def __init__(self):
