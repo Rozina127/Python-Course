@@ -39,9 +39,6 @@ print(f"ID: {user2.id}, Name: {user2.name}")  # Output: ID: 456, Name: Wali
  
  
 #using methods 
-
-
-
 # Class to represent a single question and its answer
 class Question:
     def __init__(self, text, answer):
