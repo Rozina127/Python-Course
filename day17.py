@@ -100,6 +100,6 @@ def main():
     # Show the final score once the quiz is complete
     quiz.show_final_score()
 
-# main function if this script is executed
+# main function if this script is execute
 if __name__ == "__main__":
     main()
