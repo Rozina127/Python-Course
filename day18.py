@@ -95,6 +95,6 @@ def exit_on_click():
 draw_spirograph(5)
 
 screen = t.Screen()
-screen.onkey(exit_on_click, "q")  # Press 'q' to exit
+screen.onkey(exit_on_click, "q")  # Press "q" to exit 
 screen.listen()
 screen.mainloop()  # Keeps the screen open until 'q' is pressed
