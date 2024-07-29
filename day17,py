@@ -73,7 +73,7 @@ class Quiz:
             print(f"Wrong! The correct answer is {correct_answer}.\n")
 
     def has_more_questions(self):
-        # Check if there are more questions to ask
+        # Check if there are more questions to ask 
         return self.question_number < len(self.questions)
 
     def show_final_score(self):
@@ -97,7 +97,7 @@ def main():
     while quiz.has_more_questions():
         quiz.next_question()
 
-    # Show the final score once the quiz is complete
+    # Show the final score once the quiz is completed
     quiz.show_final_score()
 
 # Run the main function if this script is executed
