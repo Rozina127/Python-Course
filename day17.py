@@ -97,9 +97,9 @@ def main():
     while quiz.has_more_questions():
         quiz.next_question()
 
-    # Show the final score once the quiz is completed
+    # Show the final score once the quiz is complete
     quiz.show_final_score()
 
-# Run the main function if this script is executed
+# main function if this script is executed
 if __name__ == "__main__":
     main()
