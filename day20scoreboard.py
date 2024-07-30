@@ -11,7 +11,7 @@ class Scoreboard(Turtle):
         self.penup()  # Lift the pen to avoid drawing lines
         self.hideturtle()  # Hide the turtle icon
         self.goto(0, 260)  # Position the scoreboard at the top of the screen
-        self.update_scoreboard()  # Display the initial score
+        self.update_scoreboard()  # Display the initial score of the game 
 
     def update_scoreboard(self):
         self.clear()  # Clear the previous score
