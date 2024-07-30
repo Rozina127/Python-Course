@@ -27,4 +27,4 @@ class Scoreboard(Turtle):
         self.goto(0, 0)  # Move to the center of the screen
         self.write("GAME OVER", align=ALIGNMENT, font=FONT)  # Display "GAME OVER" message
         self.goto(0, -30)  # Move slightly below the "GAME OVER" message
-        self.write("TRY AGAIN", align=ALIGNMENT, font=FONT)  # Display "TRY AGAIN" message
+        self.write("TRY AGAIN", align=ALIGNMENT, font=FONT)  # Display "TRY AGAIN" msg
