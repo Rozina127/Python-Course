@@ -8,7 +8,7 @@ class Food(Turtle):
         self.shape("circle")  # Set the shape of the food
         self.color("green")  # Set the color of the food
         self.penup()  # Lift the pen to avoid drawing lines
-        self.speed("fastest")  # Set the speed to the fastest for instant movement
+        self.speed("fastest")  # Set the speed to the fastest for instant movements
         self.refresh()  # Move the food to a random position
 
     def refresh(self):
