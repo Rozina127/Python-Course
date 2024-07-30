@@ -32,7 +32,7 @@ class Snake:
     def move(self):
         for seg_num in range(len(self.segments) - 1, 0, -1):
             new_x = self.segments[seg_num - 1].xcor()  # Get the x-coordinate of the previous segment
-            new_y = self.segments[seg_num - 1].ycor()  # Get the y-coordinate of the previous segment
+            new_y = self.segments[seg_num - 1].ycor()  # Get the y-coordinate of the pre segment
             self.segments[seg_num].goto(new_x, new_y)  # Move the segment to the new position
         self.head.forward(MOVE_DISTANCE)  # Move the head forward
 
@@ -43,7 +43,6 @@ class Snake:
     def down(self):
         if self.head.heading() != UP:
             self.head.setheading(DOWN)
-
     def left(self):
         if self.head.heading() != RIGHT:
             self.head.setheading(LEFT)
