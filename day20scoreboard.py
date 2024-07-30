@@ -1,11 +1,9 @@
 from turtle import Turtle  # Import Turtle class from the turtle module
-
 # Constants for text alignment and font style
 ALIGNMENT = "center"
 FONT = ("Courier", 24, "normal")
 
 class Scoreboard(Turtle):
-
     def __init__(self):
         super().__init__()
         self.score = 0  # Initialize the score
@@ -28,3 +26,4 @@ class Scoreboard(Turtle):
         self.write("GAME OVER", align=ALIGNMENT, font=FONT)  # Display "GAME OVER" message
         self.goto(0, -30)  # Move slightly below the "GAME OVER" message
         self.write("TRY AGAIN", align=ALIGNMENT, font=FONT)  # Display "TRY AGAIN" msg
+        

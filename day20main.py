@@ -50,3 +50,13 @@ while game_is_on:
             scoreboard.game_over()  # Display "Game Over" message
 
 screen.exitonclick()  # Close the window when it is clicked
+
+
+#slices in pyhon 
+"""piano_keys = ["a", "b", "c", "d", "e", "f", "g"]
+piano_tuple = ("do", "re", "mi", "fa", "so", "la", "ti")
+
+print(piano_tuple[1:5])"""
+
+
+
