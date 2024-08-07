@@ -103,3 +103,6 @@ data_dict = {
 df = pandas.DataFrame(data_dict)
 df.to_csv("day25_squirrel_count.csv")
 
+
+
+
