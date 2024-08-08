@@ -56,19 +56,18 @@ def save():
                 data = json.load(data_file)
         except FileNotFoundError:
             # If the file does not exist, create a new one with the new data
-            with open("day29projectdata.json", "w") as data_file:
-                json.dump(new_data, data_file, indent=4)
+            data = new_data  # Start with the new data if the file doesn't exist
         else:
             # Update the old data with the new data
             data.update(new_data)
 
-            # Save the updated data back to the file
-            with open("day29projectdata.json", "w") as data_file:
-                json.dump(data, data_file, indent=4)
-        finally:
-            # Clear the website and password entry fields
-            website_entry.delete(0, END)
-            password_entry.delete(0, END)
+        # Save the updated data back to the file (or create a new file if it didn't exist)
+        with open("day29projectdata.json", "w") as data_file:
+            json.dump(data, data_file, indent=4)
+
+        # Clear the website and password entry fields
+        website_entry.delete(0, END)
+        password_entry.delete(0, END)
 
 # ---------------------------- FIND PASSWORD ------------------------------- #
 
