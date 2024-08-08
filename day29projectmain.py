@@ -46,7 +46,7 @@ def save():
                                                       f"\nPassword: {password} \nIs it ok to save?")
         if is_ok:  # If the user confirms
             # Save the details to a file named "data.txt"
-            with open("data.txt", "a") as data_file:
+            with open("day29projectdata.txt", "a") as data_file:
                 data_file.write(f"{website} | {email} | {password}\n")  # Write the details in the file
                 website_entry.delete(0, END)  # Clear the website entry field
                 password_entry.delete(0, END)  # Clear the password entry field
