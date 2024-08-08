@@ -61,7 +61,7 @@ window.config(padx=100, pady=100)  # Add padding around the window
 
 # Create a canvas for the logo
 canvas = Canvas(height=200, width=200)  # Create a canvas of size 200x200 pixels
-logo_img = PhotoImage(file="logo.png")  # Load the logo image
+logo_img = PhotoImage(file="day29projectlogo.png")  # Load the logo image
 canvas.create_image(100, 100, image=logo_img)  # Place the logo image at the center of the canvas
 canvas.grid(row=0, column=1)  # Position the canvas in the grid
 
